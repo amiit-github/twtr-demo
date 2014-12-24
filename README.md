@@ -1,6 +1,6 @@
 # Mission Itch
 
-### ================ Setup Environment on Mac ================
+### ===== Setup Environment on Mac =======
 
 Install Node
 
