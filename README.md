@@ -1,4 +1,4 @@
-# Mission Itch
+# IMO
 
 ### ===== Setup Environment on Mac =======
 
