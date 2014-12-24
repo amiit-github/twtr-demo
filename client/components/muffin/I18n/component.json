@@ -1,0 +1,12 @@
+{
+  "name": "I18n",
+  "version": "0.1.0",
+  "description": "Localization support for Muffin apps",
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.coffee"
+  ],
+  "keywords": [],
+  "license": "MIT"
+}

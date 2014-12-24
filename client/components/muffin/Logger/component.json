@@ -1,0 +1,12 @@
+{
+  "name": "Logger",
+  "version": "0.1.0",
+  "description": "Logging support for Muffin apps",
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.coffee"
+  ],
+  "keywords": [],
+  "license": "MIT"
+}

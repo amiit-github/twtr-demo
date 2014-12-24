@@ -1,0 +1,9 @@
+{
+  "version": "*",
+  "type": "script",
+  "main": "jquery.lightbox_me.js",
+  "dependencies": {
+    "components/jquery": "*"
+  },
+  "name": "Lightbox_me"
+}

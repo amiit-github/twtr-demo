@@ -1,0 +1,12 @@
+{
+  "name": "forms",
+  "version": "0.1.0",
+  "description": "Provide forms support for Backbone apps",
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.coffee"
+  ],
+  "keywords": [],
+  "license": "MIT"
+}

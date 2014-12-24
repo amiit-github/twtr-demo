@@ -1,0 +1,7 @@
+{
+  "version": "*",
+  "type": "script",
+  "main": "jquery.js",
+  "exports": "$",
+  "name": "jquery"
+}

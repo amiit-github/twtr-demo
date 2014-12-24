@@ -1,0 +1,63 @@
+{
+  "aliases": {
+    "apps": "javascripts/apps"
+  },
+  "concat": [
+    "javascripts/apps/main/start"
+  ],
+  "dependencies": {
+    "muffin/I18n": "*",
+    "muffin/Logger": "*",
+    "muffin/forms": "*",
+    "components/jquery": {
+      "version": "*",
+      "type": "script",
+      "main": "jquery.js",
+      "exports": "$"
+    },
+    "jashkenas/underscore": {
+      "version": "*",
+      "type": "script",
+      "main": "underscore.js",
+      "exports": "_"
+    },
+    "jashkenas/backbone": {
+      "name": "Backbone",
+      "version": "*",
+      "type": "script",
+      "main": "backbone.js",
+      "dependencies": {
+        "jashkenas/underscore": "*",
+        "components/jquery": "*"
+      },
+      "exports": "Backbone"
+    },
+    "twbs/bootstrap": {
+      "version": "*",
+      "files": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css",
+        "dist/fonts/glyphicons-halflings-regular.ttf",
+        "dist/fonts/glyphicons-halflings-regular.woff"
+      ]
+    },
+    "buckwilson/Lightbox_me": {
+      "version": "*",
+      "type": "script",
+      "main": "jquery.lightbox_me.js",
+      "dependencies": {
+        "components/jquery": "*"
+      }
+    }
+  },
+  "development": {
+    "baseURL": "/api/v1",
+    "assetHost": "/",
+    "logLevel": "DEBUG"
+  },
+  "production": {
+    "baseURL": "/api/v1",
+    "assetHost": "/",
+    "logLevel": "ERROR"
+  }
+}

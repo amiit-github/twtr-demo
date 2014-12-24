@@ -1,0 +1,551 @@
+@import "prefixer.less";
+
+@black: #000;
+@lightblack: #333;
+@gray: #999;
+@white: #fff;
+@lightgray: #AAA;
+
+body {
+  margin-top: 40px;
+  margin-bottom: 49px;
+  min-height: 100%;
+  background: #333;
+}
+
+nav.navbar {
+  min-height: 40px;
+  height: 40px;
+  background-color: #333;
+}
+
+nav.navbar.visible-xs {
+  background: #333 url(../images/logo.png) no-repeat center center;
+  background-size: 24px 24px;
+}
+
+.navbar-nav {
+  float: left;
+  margin: 0;
+
+  li {
+    float: left;
+  }
+}
+
+.nav > li > a {
+  padding: 0 15px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 40px;
+
+  .glyphicon {
+    top: 2px;
+    font-size: 18px;
+    margin-right: 6px;
+  }
+}
+
+li.active .glyphicon {
+  color: #72cbf8;
+}
+
+.logo {
+  height: 24px;
+  margin-top: 8px;
+}
+
+button.btn-compose {
+  margin: 6px 16px 6px 10px;
+  padding: 2px 8px 3px 10px;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+  border: none;
+  .box-shadow(inset 0 1px 0 rgba(255,255,255,.30));
+  background-color: #2c77ba;
+  .border-radius(4px);
+}
+
+button.btn-logout {
+  margin: 6px 16px 6px 10px;
+  padding: 2px 8px 3px 10px;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+  border: none;
+  background: none;
+}
+
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 49px;
+  background-color: #333;
+
+  ul {
+    width: 100%;
+    margin: 0;
+
+    li {
+      width: 50%;
+      text-align: center;
+
+      a {
+        color: #999999;
+        line-height: 49px;
+
+        &:hover {
+          color: #ffffff;
+          background-color: transparent;
+        }
+      }
+
+      &.active a {
+        color: #ffffff;
+        background-color: #080808;
+      }
+    }
+  }
+}
+
+#page-container {
+  background: rgba(255, 255, 255, 0.3);
+
+  aside {
+    width: 37%;
+    float: left;
+    padding: 15px 5px 15px 16px;
+  }
+
+  #content-area {
+    width: 63%;
+    float: left;
+    padding: 15px 16px 15px 8px;
+
+    .tweet-list-view, .list-view {
+      background: white;
+      .border-radius(5px);
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+.card {
+  margin: 0 0 1em 0;
+  background: #f9f9f9;
+  .border-radius(5px);
+  border: 1px solid #ccc;
+}
+
+// Tweets
+.tweets-header {
+  padding: 12px;
+  border-bottom: 1px solid #e8e8e8;
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.tweet {
+  position: relative;
+  min-height: 75px;
+  padding: 9px 12px 9px;
+  border-bottom: 1px solid #e8e8e8;
+
+  .tweet-content {
+    margin-left: 58px;
+
+    .tweet-header {
+      .tweet-author-full-name {
+        color: @lightblack;
+      }
+
+      .tweet-author-username {
+        display: inline;
+        color: @lightgray;
+      }
+    }
+
+    .tweet-text {
+      margin: 0.6em 0 0.6em 0;
+      word-wrap: break-word;
+    }
+
+    .tweet-footer {
+      overflow: hidden;
+      color: @gray;
+      font-size: 12px;
+
+      .tweet-created-at {
+        color: @gray;
+      }
+    }
+  }
+}
+
+.avatar {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 48px;
+  height: 48px;
+  .border-radius(5px);
+}
+
+.size32 {
+  width: 32px;
+  height: 32px;
+}
+
+// Compose View
+.compose-view-container {
+  .border-radius(6px);
+  background: #f8f8f8;
+
+  .compose-header {
+    position: relative;
+    padding: 8px 0;
+    background: #EFEFEF;
+    border-bottom: 1px solid #ddd;
+    .border-radius(6px 6px 0 0);
+
+    h3 {
+      width: 75%;
+      margin: 0 auto;
+      text-align: center;
+      color: #555;
+      font-size: 14px;
+      font-weight: bold;
+      text-shadow: 0 1px 0 #fff;
+    }
+
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 4px;
+    }
+  }
+
+  textarea {
+    width: 500px;
+    height: 100px;
+    margin: 18px 16px 6px 16px;
+    border: 1px solid #ccc;
+    .border-radius(3px);
+  }
+
+  .compose-info {
+    text-align: right;
+    padding: 0 4px 8px;
+    margin-right: 10px;
+
+    .compose-character-count {
+      margin-right: 6px;
+      color: @gray;
+      &.invalid {
+        color: #b83535;
+      }
+    }
+  }
+}
+
+// Login page
+#login-bg {
+  position: fixed;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.caption {
+  position: fixed;
+  right: 3%;
+  bottom: 5%;
+  width: 80%;
+  max-width: 500px;
+  color: white;
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  p {
+    font-size: 1.4em;
+    line-height: 1.2em;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}
+
+// Profile page
+.card.profile-nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 14px;
+      vertical-align: middle;
+      height: 44px;
+      background: #F9F9F9;
+      border-bottom: 1px solid #ccc;
+
+      a, .glyphicon {
+        color: @gray;
+      }
+
+      &:first-child {
+        .border-radius(5px 5px 0 0);
+      }
+
+      &:last-child {
+        .border-radius(0 0 5px 5px);
+        border-bottom: none;
+      }
+
+      &.active {
+        background: white;
+
+        a, .glyphicon {
+          font-weight: bold;
+          color: #444;
+        }
+      }
+    }
+  }
+}
+
+// User
+.users-header {
+  padding: 12px;
+  border-bottom: 1px solid #e8e8e8;
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.user {
+  position: relative;
+  min-height: 54px;
+  padding: 9px 12px 9px;
+  border-bottom: 1px solid #e8e8e8;
+
+  .user-content {
+    margin-left: 64px;
+    margin-top: 5px;
+
+    .user-header {
+      .user-full-name {
+        color: @lightblack;
+      }
+      .user-username {
+        color: @lightgray;
+        margin-top: 6px;
+      }
+    }
+
+    .user-actions {
+      position: absolute;
+      top: 21px;
+      right: 12px;
+      a {
+        color: purple;
+      }
+    }
+  }
+}
+
+// Who to follow
+.recommended-header {
+  padding: 0 1em;
+  border-bottom: 1px solid #ccc;
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+}
+
+.user-to-follow {
+  position: relative;
+  min-height: 75px;
+  padding: 9px 12px 9px;
+  border-bottom: 1px solid #ccc;
+
+  .user-to-follow-content {
+    margin-left: 58px;
+
+    .user-to-follow-header {
+      float: left;
+
+      .user-full-name {
+        color: @lightblack;
+      }
+      .user-username {
+        color: @lightgray;
+      }
+    }
+
+    .user-to-follow-actions {
+      margin-top: 8px;
+    }
+  }
+}
+
+// Profile summary view
+.profile-view {
+  margin: 0 0 1em 0;
+  background: #f9f9f9;
+  .border-radius(5px);
+
+  .profile-container {
+    background: #333;
+    .border-radius(5px 5px 0 0);
+
+    .profile {
+      padding: 30px 0 50px 0;
+      color: white;
+      text-align: center;
+
+      .profile-avatar {
+        display: block;
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+        border: 5px solid white;
+        .border-radius(5px);
+      }
+
+      .profile-full-name {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.8;
+      }
+
+      .profile-username {
+        font-size: 18px;
+        line-height: 0.8;
+      }
+    }
+  }
+}
+
+// Profile summary card
+.account-summary-container {
+  padding: 12px;
+
+  .account-summary {
+    position: relative;
+    padding-bottom: 0;
+
+    .account-summary-avatar {
+      top: 0;
+      left: 0;
+    }
+
+    .account-summary-content {
+      margin-left: 42px;
+    }
+
+    .account-summary-full-name {
+      display: block;
+      font-size: 14px;
+    }
+
+    .account-summary-metadata {
+      font-size: 11px;
+      color: @gray;
+    }
+  }
+}
+
+.stats {
+  margin: 0;
+  padding: 0 12px;
+  overflow: hidden;
+  list-style: none;
+  border: solid #e8e8e8;
+  border-width: 1px 0 1px 0;
+  .border-radius(0 0 5px 5px);
+
+  > li {
+    float: left;
+    padding: 7px 12px;
+    font-size: 10px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: @gray;
+    border: solid #e8e8e8;
+    border-width: 0 1px 0 0;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      border-right: 0;
+    }
+    strong {
+      display: block;
+      font-size: 14px;
+      color: @lightblack;
+    }
+  }
+}
+
+// Phone
+@media (max-width: 767px) {
+
+  #page-container {
+    padding: 0;
+
+    aside {
+      display: none;
+    }
+
+    #content-area {
+      width: 100%;
+      padding: 0;
+
+      .tweet-list-view, .list-view {
+        .border-radius(0);
+      }
+    }
+  }
+
+  .compose-view-container textarea {
+    width: 260px;
+    height: 80px;
+  }
+
+  .profile-view {
+    .border-radius(0);
+
+    .profile-container {
+      .border-radius(0);
+    }
+  }
+}
+
+// Tablet or Desktop
+@media (min-width: 768px) {
+  .container {
+    max-width: 870px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,17 @@
+.profile-container
+  .profile
+    img.profile-avatar(src!="<%- user.profileImageUrl || 'images/default_avatar.jpeg' %>", alt!="<%- user.name %>")
+    .profile-full-name <%- user.name || 'Unknown User' %>
+    .profile-username @<%- user.username || '' %>
+
+.stats-container
+  ul.stats
+    li.stat-tweets
+      strong <%- user.tweetsCount || 0 %>
+      | tweets
+    li.stat-following
+      strong <%- user.followingCount || 0 %>
+      | following
+    li.stat-followers
+      strong <%- user.followersCount || 0 %>
+      | followers

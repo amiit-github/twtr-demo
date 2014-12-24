@@ -1,0 +1,44 @@
+nav.navbar.navbar-inverse.navbar-fixed-top.hidden-xs
+  .container
+    ul.nav.navbar-nav
+      li.active(data-tab='home')
+        a(href='#home')
+          span.glyphicon.glyphicon-home
+          | Home
+      li(data-tab='me')
+        a(href='#me')
+          span.glyphicon.glyphicon-user
+          | Me
+      li
+        a(href='#').btn-logout
+          span.glyphicon.glyphicon-log-out
+          | Logout
+    ul.nav.navbar-nav.pull-right
+      li
+        img.logo(src='images/logo.png')
+      li
+        button.btn-compose
+          span.glyphicon.glyphicon-edit
+
+nav.navbar.navbar-inverse.navbar-fixed-top.visible-xs
+  ul.nav.navbar-nav.pull-left
+    li
+      button.btn-logout
+        span.glyphicon.glyphicon-log-out
+  ul.nav.navbar-nav.pull-right
+    li
+      button.btn-compose
+        span.glyphicon.glyphicon-edit
+
+#page-container.container
+
+.tabbar.visible-xs
+  ul.nav.navbar-nav
+    li.active(data-tab='home')
+      a(href='#home')
+        span.glyphicon.glyphicon-home
+        | Home
+    li(data-tab='me')
+      a(href='#me')
+        span.glyphicon.glyphicon-user
+        | Me

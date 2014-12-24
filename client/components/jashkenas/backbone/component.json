@@ -1,0 +1,11 @@
+{
+  "name": "Backbone",
+  "version": "*",
+  "type": "script",
+  "main": "backbone.js",
+  "dependencies": {
+    "jashkenas/underscore": "*",
+    "components/jquery": "*"
+  },
+  "exports": "Backbone"
+}

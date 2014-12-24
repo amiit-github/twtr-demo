@@ -1,0 +1,7 @@
+{
+  "version": "*",
+  "type": "script",
+  "main": "underscore.js",
+  "exports": "_",
+  "name": "underscore"
+}

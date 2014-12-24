@@ -1,0 +1,35 @@
+{
+  "name": "app-name",
+  "author": "",
+  "description": "Application description",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6.3",
+    "express": "~3.4.0",
+    "mongoose": "~2.9.1",
+    "socket.io": "~0.9.10",
+    "express-namespace": "~0.1.1",
+    "underscore": "~1.4.3",
+    "connect-mongo": "~0.2.0",
+    "passport": "~0.1.17",
+    "passport-google": "~0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.1.0",
+    "chai": "~1.2.0",
+    "docco": "~0.3.0"
+  },
+  "subdomain": "",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
