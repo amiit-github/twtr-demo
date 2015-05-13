@@ -28,3 +28,5 @@ The frontend stack uses Backbone.js and CoffeeScript, and two backend stacks inc
 `cd <project-name>`
 
 `muffin watch -s`
+
+### THANKS
